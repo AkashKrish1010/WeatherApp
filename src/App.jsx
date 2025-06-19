@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Search from './components/Search';
 import { useDebounce } from 'use-debounce';
 import WeatherBG from './components/WeatherBG';
-import { Analytics } from '@vercel/analytics/next';
+
 
 
 const App = () => {
@@ -39,7 +39,6 @@ const App = () => {
 
   return (
     <div className='relative h-screen w-full overflow-hidden'>
-      <Analytics />
       <WeatherBG
         key={weatherData?.weather[0]?.description} // Force remount on description change
         hasSearched={hasSearched}
