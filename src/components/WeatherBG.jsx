@@ -19,19 +19,23 @@ const WeatherBG = ({ hasSearched, weatherData }) => {
     }
 
     setVideoSrc(src);
-    setIsVideoLoaded(false); // reset loader
+    setIsVideoLoaded(false); 
   }, [hasSearched, weatherData]);
 
   return (
     <>
-      {/* Fallback UI while video is loading */}
-      {!isVideoLoaded && (
-        <div className="absolute inset-0 bg-gradient-to-br from-sky-500 to-blue-900 blur-sm z-0 transition-opacity duration-300" />
-      )}
+    
+      <div
+        className={`absolute inset-0 bg-cover bg-center z-0 transition-opacity duration-700 ${
+          isVideoLoaded ? 'opacity-0' : 'opacity-100'
+        }`}
+        style={{ backgroundImage: `url('/bg-cloud.jpg')` }}
+      />
 
+      
       {videoSrc && (
         <video
-          className={`absolute inset-0 h-full w-full object-cover z-0 transition-opacity duration-500 ${
+          className={`absolute inset-0 h-full w-full object-cover z-0 transition-opacity duration-700 ${
             isVideoLoaded ? 'opacity-100' : 'opacity-0'
           }`}
           autoPlay
