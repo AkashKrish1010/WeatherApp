@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Search from './components/Search';
 import { useDebounce } from 'use-debounce';
 import WeatherBG from './components/WeatherBG';
-
+import { Analytics } from '@vercel/analytics/next';
 
 
 const App = () => {
@@ -39,6 +39,7 @@ const App = () => {
 
   return (
     <div className='relative h-screen w-full overflow-hidden'>
+      <Analytics />
       <WeatherBG
         key={weatherData?.weather[0]?.description} // Force remount on description change
         hasSearched={hasSearched}
@@ -66,7 +67,7 @@ const App = () => {
                 <p className='text-sm'>Wind: {weatherData.wind.speed} m/s</p>
               </div>
             </div>
-            <button onClick={() => {setHasSearched(false); setWeatherData(null); setCity('')}} className='mt-5 font-semibold  w-[50%] bg-blue-400 text-white p-2 rounded-lg hover:bg-blue-500 transition duration-200 hover:shadow-lg hover:scale-102'>New Search</button>
+            <button onClick={() => { setHasSearched(false); setWeatherData(null); setCity('') }} className='mt-5 font-semibold  w-[50%] bg-blue-400 text-white p-2 rounded-lg hover:bg-blue-500 transition duration-200 hover:shadow-lg hover:scale-102'>New Search</button>
           </div>
         ) : <Search city={city} setCity={setCity} fetchWeather={fetchWeather} />}
       </div>
