@@ -1,12 +1,62 @@
-# React + Vite
+# ClimaZen – Dynamic Weather App 🌦️
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**ClimaZen** is a responsive, React based weather application that fetches real‑time weather data from the **OpenWeatherMap API** and delivers an interactive experience. The app displays weather details (temperature, humidity, wind speed, etc.) for any city or country entered by the user, and it dynamically changes its background video based on the current weather conditions (rain, clear, cloudy, snow, or thunderstorm). 
 
-Currently, two official plugins are available:
+👉 **Live Demo**: [https://weather-app-two-olive-16.vercel.app](https://weather-app-two-olive-16.vercel.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## ⚡ Features
+- 🌍 **Search any city or country** for current weather
+- 🎥 **Dynamic video background** matching the weather
+- ⛅ Placeholder background while video loads
+- 💻 Fully **responsive design** built with **Tailwind CSS**
+- ⚡ Smooth fade‑in/out video transitions
+- 🔥 Powered by the **OpenWeatherMap API**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Tech Stack
+- **Framework**: React + Vite
+- **Styles**: Tailwind CSS
+- **State Management**: React Hooks (`useState`, `useEffect`)
+- **API**: OpenWeatherMap
+- **Video Handling**: HTML5 Video (`onCanPlayThrough`)
+- **Build Tool**: Vite
+- **Deployment**: Vercel
+
+---
+
+## ⚡ Getting Started
+
+### ✅ Prerequisites
+- Node.js (v18 or later)
+- NPM or Yarn
+- An [OpenWeatherMap API Key](https://openweathermap.org/api)
+
+### 📥 Installation
+```bash
+git clone https://github.com/<your-username>/climazen.git
+cd climazen
+npm install
+```
+
+
+### 🔑 Configure Environment Variable
+Create an .env file in the root directory and add your API key:
+```bash
+VITE_API_KEY=your_openweathermap_api_key_here
+```
+
+### ⚡ Usage
+Run the app:
+```bash
+npm run dev
+```
+
+### 👥 Contributing
+Contributions, bug reports, and feature requests are welcome!
+Open an issue or create a pull request to help make ClimaZen better.
+
+### 📄 License
+This project is licensed under the MIT License.
