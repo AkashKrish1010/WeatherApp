@@ -40,7 +40,7 @@ const App = () => {
   return (
     <div className='relative h-screen w-full overflow-hidden'>
       <WeatherBG
-        key={weatherData?.weather[0]?.description} // Force remount on description change
+        key={weatherData?.weather[0]?.description} 
         hasSearched={hasSearched}
         weatherData={weatherData}
       />
