@@ -2,7 +2,7 @@
 
 **ClimaZen** is a responsive, React based weather application that fetches real‑time weather data from the **OpenWeatherMap API** and delivers an interactive experience. The app displays weather details (temperature, humidity, wind speed, etc.) for any city or country entered by the user, and it dynamically changes its background video based on the current weather conditions (rain, clear, cloudy, snow, or thunderstorm). 
 
-👉 **Live Demo**: [https://weather-app-two-olive-16.vercel.app](https://weather-app-two-olive-16.vercel.app)
+👉 **Live Demo**: [https://weather-app-two-olive-16.vercel.app](https://climazen-weather.vercel.app)
 
 ---
 
